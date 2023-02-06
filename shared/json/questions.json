@@ -1,0 +1,91 @@
+[
+    {
+        "id": "1",
+        "question": "<h6>1. What's the output?</h6><pre>function sayHi() { console.log(name); console.log(age); var name = 'Lydia'; let age = 21; } sayHi();</pre>",
+        "options": [
+            {
+                "answer": "Lydia and undefined"
+            },
+            {
+                "answer": "Lydia and ReferenceError"
+            },
+            {
+                "answer": "ReferenceError and 21"
+            },
+            {
+                "answer": "undefined and ReferenceError",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "question": "<h6>What's the output?</h6><pre>for (var i = 0; i < 3; i++) { setTimeout(() => console.log(i), 1); } for (let i = 0; i < 3; i++) { setTimeout(() => console.log(i), 1); }</pre>",
+        "options": [
+            {
+                "answer": "0 1 2 and 0 1 2"
+            },
+            {
+                "answer": "0 1 2 and 3 3 3"
+            },
+            {
+                "answer": "3 3 3 and 0 1 2",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "question": "<h6>What's the output?</h6><pre>const shape = { radius: 10, diameter() { return this.radius * 2; }, perimeter: () => 2 * Math.PI * this.radius, }; console.log(shape.diameter()); console.log(shape.perimeter());</pre>",
+        "options": [
+            {
+                "answer": "20 and 62.83185307179586"
+            },
+            {
+                "answer": "20 and NaN",
+                "isCorrect": true
+            },
+            {
+                "answer": "20 and 63"
+            },
+            {
+                "answer": "NaN and 63"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "question": "<h6>What's the output?</h6><pre+true; !'Lydia';</pre>",
+        "options": [
+            {
+                "answer": "1 and false",
+                "isCorrect": true
+            },
+            {
+                "answer": "false and NaN"
+            },
+            {
+                "answer": "false and false"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "question": "<h6>Which one is true?</h6><preconst bird = { size: 'small', }; const mouse = { name: 'Mickey', small: true, };</pre>",
+        "options": [
+            {
+                "answer": "mouse.bird.size is not valid",
+                "isCorrect": true
+            },
+            {
+                "answer": "mouse[bird.size] is not valid"
+            },
+            {
+                "answer": "mouse[bird['size']] is not valid"
+            },
+            {
+                "answer": "All of them are valid"
+            }
+        ]
+    }
+]
