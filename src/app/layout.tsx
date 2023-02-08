@@ -1,4 +1,7 @@
-import './globals.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import '../assets/css/style.css'
+import { Providers } from "./provider";
 
 export default function RootLayout({
   children,
@@ -9,7 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
