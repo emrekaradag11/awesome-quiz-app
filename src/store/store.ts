@@ -1,15 +1,23 @@
-import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "../slices/userSlice";
- 
-export function makeStore() {
-  return configureStore({
-    reducer: {
-      user: userReducer,
-    },
-  });
+import { createStore } from 'redux'
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import rootSlice from "../slices/rootSlice";
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
+
+
+const rootReducer = combineReducers({
+  rootSlice
+})
+
+const persistConfig = {
+  key: 'root',
+  storage
 }
 
-export const store = makeStore();
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const store = createStore(persistedReducer)
+export const persistor = persistStore(store)
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
