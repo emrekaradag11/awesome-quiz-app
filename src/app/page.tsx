@@ -3,9 +3,9 @@ import Header from './components/Header'
 import StatusBar from './components/StatusBar'
 import Counter from './components/step/Counter'
 import Step1 from './components/step/login/Step1'
+import Step2 from './components/step/login/Step2'
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { setStep } from "@/slices/rootSlice";
 import { AppDispatch, RootState } from "@/store/store";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
           <form id="steps" method="post">
             <div className="show-section">
               {step <= 2 ? <Counter /> : null}
-              <Step1 />
+              {step === 1 ? <Step1 /> : <Step2 />}
             </div>
             <StatusBar />
           </form>

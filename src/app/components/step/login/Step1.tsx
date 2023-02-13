@@ -19,9 +19,9 @@ function Step1({ }: Props) {
 
     const setClick = async () => {
         await dispatch(setUser({
-            'name' : nameRef.current?.value,
-            'email' : emailRef.current?.value,
-            'gender' : genderRef.current?.value,
+            'name': nameRef.current?.value,
+            'email': emailRef.current?.value,
+            'gender': genderRef.current?.value,
         }));
         await dispatch(setStep(2));
     };
@@ -62,9 +62,6 @@ function Step1({ }: Props) {
                         <button className="next" id="step2btn" onClick={() => setClick()} type="button">Next<i className="fa fa-arrow-right"></i></button>
                     </div>
                 </div>
-            </div>
-            <div className="step1-img-2">
-                <img src="assets/images/step2-img-2.png" alt="" />
             </div>
         </section>
     )

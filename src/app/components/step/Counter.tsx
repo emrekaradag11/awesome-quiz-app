@@ -1,7 +1,6 @@
 import React from 'react'
-import { useSelector, useDispatch } from "react-redux";
-import { setStep } from "@/slices/rootSlice";
-import { AppDispatch, RootState } from "@/store/store";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 type Props = {
 
@@ -17,7 +16,8 @@ function Counter({ }: Props) {
         <div className="step-counter">
             <div className="step-counter-inner">
                 <div className={(step === 1 ? 'active' : null) + " step-number"}> 1 </div>
-                <div className={(step === 2 ? 'active' : null) + " step-number no-line"}> 2 </div>
+                <div className={(step === 2 ? 'active' : null) + " step-number"}> 2 </div>
+                <div className={(step === 3 ? 'active' : null) + " step-number no-line"}> 3 </div>
             </div>
         </div>
     )
