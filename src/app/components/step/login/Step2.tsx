@@ -9,16 +9,13 @@ type Props = {}
 
 function Step2({ }: Props) {
 
-
   const dispatch = useDispatch<AppDispatch>();
   const { difficult } = useSelector(
       (state: RootState) => state.rootSlice
   );
   
   const setClick = async () => {
-
-    //await dispatch(setDifficult(diff));
-    //await dispatch(setStep(2));
+    await dispatch(setStep(3));
   };
   const handleSelectDiff = async (diff = "") => (await dispatch(setDifficult(diff)))
 
@@ -29,7 +26,6 @@ function Step2({ }: Props) {
           <h2 className="main-heading"> Please choose a Quiz</h2>
           <p className="main-text"> Please select a difficulty to get started! </p>
         </article>
-
 
         <div className="steps-inner">
           <div className="lightSpeedIn row">
